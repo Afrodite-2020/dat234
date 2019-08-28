@@ -8,12 +8,13 @@ SUCCESS=$?
 
 if [ $SUCCESS -eq 0 ]
 then
-  echo "$baseip.$i has replied"
+	echo "$baseip.$i is online." >> online.txt
 else
-  :
+	:
 fi &
-i=$((i + 1))
-sleep 1.3
+i=$((i+1))
 done
+echo "Done!"
+echo "Use 'cat online.txt' to see all online IP's".
 
 
