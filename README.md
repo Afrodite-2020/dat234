@@ -1,4 +1,4 @@
-# dat234
+# DAT234, Scripting and hacking
 A repository for assignments in the course DAT234, Grimstad
 
 Group members:
