@@ -8,9 +8,9 @@ SUCCESS=$?
 
 if [ $SUCCESS -eq 0 ]
 then
-	echo "$baseip.$i is online." >> online.txt
+ echo "$baseip.$i is online." >> online.txt
 else
-	:
+ :
 fi &
 i=$((i+1))
 done
