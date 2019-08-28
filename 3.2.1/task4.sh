@@ -17,4 +17,3 @@ done
 echo "Done!"
 echo "Use 'cat online.txt' to see all online IP's".
 
-
