@@ -68,12 +68,6 @@ def task_6():
     srcC = req.text
     strr = str(srcC)
 
-    httpsCount = (re.findall("https://", strr))
-    httpCount = (re.findall("http://", strr))
-
-    print("https: " + str(len(httpsCount)))
-    print("http: " + str(len(httpCount)))
-
     links = (re.findall(r'a href=[\'"]?([^\'" >]+)', strr))
     print(links)
 
