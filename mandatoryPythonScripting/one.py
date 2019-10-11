@@ -69,13 +69,16 @@ def task_6():
     strr = str(srcC)
 
     links = (re.findall(r'a href=[\'"]?([^\'" >]+)', strr))
-    print(links)
+    i = 1
 
-    for index in range(len(links)):
-        get = requests.get(links[index])
+    for x in range(len(links)):
+        get = requests.get(links[x])
         sc = get.text
         strSc = str(sc)
-        titleSearch = re.search('<title>(.*)</title>', sc, re.IGNORECASE)
+        titleSearch = re.search('<title[^>]*>\s*((?:.|\n)*?)</title>', sc, re.IGNORECASE)
         if titleSearch:
             title = titleSearch.group(1)
-            print(title)
+            print(str(x+1)+": "+ links[x] + "\n" + "\t" + title + "\n")
+        else:
+            print(str(x+1)+': ERROR - UNABLE TO FETCH TITLE (UNAUTHORIZED?)')
+
