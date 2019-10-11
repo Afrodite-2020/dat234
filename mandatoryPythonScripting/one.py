@@ -74,7 +74,6 @@ def task_6():
     for x in range(len(links)):
         get = requests.get(links[x])
         sc = get.text
-        strSc = str(sc)
         titleSearch = re.search('<title[^>]*>\s*((?:.|\n)*?)</title>', sc, re.IGNORECASE)
         if titleSearch:
             title = titleSearch.group(1)
@@ -82,3 +81,10 @@ def task_6():
         else:
             print(str(x+1)+': ERROR - UNABLE TO FETCH TITLE (UNAUTHORIZED?)')
 
+if __name__ == "__main__":
+    task_1()
+    task_2()
+    task_3()
+    task_4()
+    task_5()
+    task_6()
